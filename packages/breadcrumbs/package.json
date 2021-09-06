@@ -2,5 +2,9 @@
   "name": "breadcrumbs",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "src/index.tsx"
+  "main": "src/index.tsx",
+  "peerdDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }
