@@ -1,0 +1,66 @@
+{
+  "name": "documentationui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@heroicons/react": "^1.0.4",
+    "@storybook/addon-a11y": "^6.3.7",
+    "@storybook/addon-viewport": "^6.3.7",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-tabs": "^2.3.3",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "react-tabs": "^3.2.2",
+    "react-tooltip": "^4.2.21",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start:tailwind": "postcss src/css/base.css -o src/css/tailwind.css --watch",
+    "start:storybook": "start-storybook -p 5000 --no-manager-cache"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.7",
+    "autoprefixer": "^10.3.2",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.1.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "tailwindcss": "^2.2.7"
+  }
+}
