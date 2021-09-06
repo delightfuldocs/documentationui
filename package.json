@@ -31,6 +31,9 @@
     "package.json": "yarn format:package"
   },
   "types": "lib/index.d.ts",
+  "dependencies": {
+    "clsx": "^1.1.1"
+  },
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
