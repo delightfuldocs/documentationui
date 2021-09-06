@@ -1,0 +1,21 @@
+/* TODO: Handle mobile screens */
+
+.breadcrumbs {
+  @apply antialiased;
+  @apply flex;
+}
+
+.breadcrumb + .breadcrumb:before {
+  @apply text-gray-400;
+  @apply px-2;
+  content: "/";
+}
+
+.breadcrumb:last-child .breadcrumb__link {
+  @apply no-underline;
+  @apply text-gray-800;
+}
+
+.breadcrumb__text {
+  @apply text-sm;
+}

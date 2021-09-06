@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.key {
+  @apply text-lg;
+  @apply p-2;
+  @apply leading-none;
+  @apply bg-white;
+  /* @apply bg-gradient-to-b;
+  @apply from-gray-50;
+  @apply to-white; */
+  @apply inline-block;
+  @apply rounded-lg;
+  @apply border-b-4;
+  @apply ring-1;
+  @apply ring-offset-1;
+  @apply ring-gray-200;
+  @apply text-gray-600;
+  @apply cursor-pointer;
+  @apply hover:border-0;
+}

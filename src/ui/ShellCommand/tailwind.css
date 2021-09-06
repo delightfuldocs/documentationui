@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.code-block {
+  @apply flex;
+  @apply antialiased;
+  @apply whitespace-nowrap;
+  @apply bg-gray-600;
+  @apply p-4;
+  @apply rounded-lg;
+  @apply text-white;
+  @apply font-mono;
+  @apply text-xs;
+  @apply leading-none;
+  @apply items-center;
+  @apply place-content-between;
+}
+
+.code-block--first-tab-active {
+  @apply rounded-tl-none;
+}
+
+.code-block__command {
+  @apply flex;
+}
+
+.code-block__prompt {
+  @apply text-gray-400;
+  @apply mr-4;
+  @apply select-none;
+}
+
+.code-block__placeholder {
+  @apply text-gray-200;
+}
+
+.code-block__link {
+  @apply text-blue-200;
+  @apply border-b;
+  @apply border-blue-200;
+  @apply cursor-pointer;
+  @apply hover:border-none;
+}
+
+.code-block__copy-button {
+  @apply flex;
+  @apply items-center;
+  @apply cursor-pointer;
+  @apply opacity-75;
+  @apply hover:opacity-100;
+}
+
+.code-block__copy-text {
+  @apply hidden;
+  @apply mr-2;
+}
+
+.code-block__copy-button:hover .code-block__copy-text {
+  @apply inline;
+}
+
+.code-block__copy-button-icon {
+  @apply h-6;
+  @apply w-6;
+}

@@ -1,0 +1,159 @@
+<div class="m-8">
+  <div class="code-block">
+    <div class="code-block__command">
+      <div class="code-block__prompt">$</div>
+      <div>
+        <span>cd</span>
+        <span class="code-block__placeholder">[directory-name]</span>
+      </div>
+    </div>
+    <div>
+      <div class="code-block__copy-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="code-block__copy-button-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-8">
+  <div class="code-block">
+    <div class="code-block__command">
+      <div class="code-block__prompt">$</div>
+      <div>
+        <span>npm install</span>
+        <span class="code-block__link">react-tabs</span>
+        <span>--dev</span>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="code-block__copy-button">
+        <div class="code-block__copy-text">Copy</div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="code-block__copy-button-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-8">
+  <div class="flex">
+    <button class="text-sm px-4 py-2 rounded-t bg-gray-600 text-white mr-4">
+      npm
+    </button>
+    <button class="text-sm rounded text-gray-600">Yarn</button>
+  </div>
+  <div class="code-block code-block--first-tab-active">
+    <div class="code-block__command">
+      <div class="code-block__prompt">$</div>
+      <div>
+        <span>yarn add</span>
+        <span class="code-block__link">@storybook/addon-a11y</span>
+        <span>--dev</span>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="code-block__copy-button">
+        <div class="code-block__copy-text">Run</div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="p-6 bg-gray-100 rounded-lg mt-2 overflow-auto h-32">
+    <pre class="font-mono text-xs leading-relaxed text-gray-800">
+  yarn add v1.22.10
+  [1/4] 🔍  Resolving packages...
+  [2/4] 🚚  Fetching packages...
+  [3/4] 🔗  Linking dependencies...
+  [4/4] 🔨  Building fresh packages...
+  success Saved lockfile.
+  success Saved 2 new dependencies.
+  info Direct dependencies
+  └─ @storybook/addon-a11y@6.3.7
+  info All dependencies
+  ├─ @storybook/addon-a11y@6.3.7
+  └─ axe-core@4.3.3
+  ✨  Done in 8.70s.</pre
+    >
+  </div>
+  <div class="mt-2 flex justify-end">
+    <button class="p-2 mr-2 text-gray-400 rounded-lg hover:bg-gray-50">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-4 w-4"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+    <button
+      class="flex bg-green-500 text-white font-bold text-sm p-2 px-4 rounded-lg items-center hover:bg-green-400"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-4 w-4 mr-2"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+        />
+      </svg>
+      <div>Re-run</div>
+    </button>
+  </div>
+</div>
