@@ -1,0 +1,52 @@
+.breadcrumbs {
+  @apply flex;
+  @apply items-center;
+  @apply antialiased;
+  @apply text-sm;
+}
+
+.breadcrumb {
+  @apply inline-block;
+}
+
+.breadcrumb__link {
+  @apply text-gray-600;
+  @apply transition-colors;
+  @apply duration-200;
+  @apply hover:text-gray-900;
+}
+
+.breadcrumb--active .breadcrumb__link {
+  @apply font-medium;
+  @apply text-gray-800;
+}
+
+.breadcrumb--separator {
+  @apply inline-block;
+  @apply mx-4;
+}
+
+.breadcrumb--separator .breadcrumb__icon {
+  @apply w-2;
+  @apply h-2;
+}
+
+.breadcrumb--collapsed {
+  @apply relative;
+  @apply inline-block;
+  @apply rounded-lg;
+  @apply p-1;
+  @apply px-2;
+  @apply bg-gray-100;
+  @apply cursor-pointer;
+}
+
+.breadcrumb--collapsed:hover {
+  @apply bg-gray-200;
+}
+
+.breadcrumb--collapsed .breadcrumb__icon {
+  @apply inline-block;
+  @apply w-4;
+  @apply h-4;
+}
