@@ -1,0 +1,117 @@
+.breadcrumbs {
+  @apply flex;
+  @apply items-center;
+  @apply antialiased;
+  @apply text-sm;
+}
+
+.breadcrumb {
+  @apply inline-block;
+}
+
+.breadcrumb__link {
+  @apply text-gray-600;
+  @apply transition-colors;
+  @apply duration-200;
+  @apply hover:text-gray-900;
+}
+
+.breadcrumb--active .breadcrumb__link {
+  @apply font-bold;
+  @apply text-gray-800;
+}
+
+.breadcrumb-separator {
+  @apply inline-block;
+  @apply mx-4;
+}
+
+.breadcrumb-separator__icon {
+  @apply w-2;
+  @apply h-2;
+}
+
+.mobile-breadcrumb {
+  @apply flex;
+  @apply text-sm;
+  @apply items-center;
+  @apply my-8;
+  @apply text-gray-600;
+}
+
+.mobile-breadcrumb {
+  @apply flex;
+  @apply items-center;
+  @apply antialiased;
+  @apply text-sm;
+}
+
+.mobile-breadcrumb__link {
+  @apply text-gray-600;
+  @apply transition-colors;
+  @apply duration-200;
+  @apply hover:text-gray-900;
+}
+
+.mobile-breadcrumb__icon {
+  @apply h-4;
+  @apply w-4;
+  @apply mr-1;
+}
+
+/* .breadcrumb--dropdown {
+  @apply relative;
+  @apply inline-block;
+  @apply rounded-lg;
+  @apply p-1;
+  @apply px-2;
+  @apply bg-gray-100;
+  @apply cursor-pointer;
+}
+
+.breadcrumb--dropdown:hover {
+  @apply bg-gray-200;
+}
+
+.breadcrumb--dropdown .breadcrumb__icon {
+  @apply inline-block;
+  @apply w-4;
+  @apply h-4;
+}
+
+.breadcrumb--dropdown .breadcrumbs {
+  @apply transition-all;
+  @apply hidden;
+  @apply opacity-0;
+  @apply -translate-y-1/2;
+  @apply duration-1000;
+}
+
+.breadcrumb--dropdown:hover .breadcrumbs {
+  @apply opacity-100;
+  @apply transition-all;
+  @apply duration-1000;
+  @apply absolute;
+  @apply block;
+  @apply left-1/2;
+  @apply -translate-x-1/2;
+  @apply leading-loose;
+  @apply translate-y-0;
+  width: max-content;
+}
+
+.breadcrumb--dropdown .breadcrumbs__list {
+  @apply opacity-100;
+  @apply transition;
+  @apply mt-2;
+  @apply bg-white;
+  @apply py-2;
+  @apply px-4;
+  @apply rounded;
+  @apply shadow;
+}
+
+.breadcrumb--dropdown .breadcrumb {
+  @apply block;
+  @apply my-1;
+} */
