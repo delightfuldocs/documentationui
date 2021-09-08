@@ -32,7 +32,8 @@
   },
   "types": "lib/index.d.ts",
   "dependencies": {
-    "clsx": "^1.1.1"
+    "clsx": "^1.1.1",
+    "use-screen-size": "^1.1.0"
   },
   "peerDependencies": {
     "react": "^16.8.0",
