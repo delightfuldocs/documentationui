@@ -1,13 +1,13 @@
-import React from "react";
-import { Breadcrumbs } from "./index";
 import "../styles.css";
+import { Breadcrumbs } from "./index";
+import React from "react";
 
 export default {
   component: Breadcrumbs,
   title: "Breadcrumbs",
 };
 
-export const PrimaryBreadcrumbs = () => {
+export const BasicBreadcrumbs = (): JSX.Element => {
   return (
     <Breadcrumbs
       items={[

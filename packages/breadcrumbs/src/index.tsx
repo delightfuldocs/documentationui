@@ -1,5 +1,13 @@
+import "../styles.css";
+import clsx from "clsx";
 import React from "react";
-import classNames from "classnames";
+import useScreenSize from "use-screen-size";
+
+export type Breadcrumb = {
+  url: string;
+  label: string;
+  active?: boolean;
+};
 
 export type Breadcrumbs = {
   items: Breadcrumb[];
@@ -7,62 +15,99 @@ export type Breadcrumbs = {
 
 export const Breadcrumbs = ({ items }: Breadcrumbs): JSX.Element | null => {
   if (!items || !Array.isArray(items) || items.length < 1) {
+    console.warn("There's no items passed into the Breadcrumbs component");
     return null;
   }
 
-  const children: React.ReactNode[] = [];
+  const { screen } = useScreenSize();
 
-  items.forEach((item, index, items) => {
-    const isLast = items.length - 1 === index;
+  if (screen === "xs" || screen === "s") {
+    const item = items[items.length - 1];
 
-    children.push(
-      <Breadcrumb url={item.url} label={item.label} active={isLast} />
+    const classes = {
+      container: "mobile-breadcrumb",
+      icon: "mobile-breadcrumb__icon",
+      link: "mobile-breadcrumb__link",
+      label: "mobile-breadcrumb__label",
+    };
+
+    // TODO: This is really just a button with an icon
+
+    return (
+      <div className={classes.container}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={classes.icon}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        <a href={item.url} className={classes.link} title={item.label}>
+          <span className={classes.label}>{item.label}</span>
+        </a>
+      </div>
     );
+  }
 
-    if (!isLast) {
-      children.push(<BreadcrumbSeparator />);
-    }
-  });
+  const classes = {
+    container: "breadcrumbs",
+    list: "breadcrumbs__list",
+  };
 
   return (
-    <nav className="breadcrumbs">
-      <ol className="breadcrumbs__list">
-        <CollapsedBreadcrumb />
-        <BreadcrumbSeparator />
-        {children}
+    <nav className={classes.container}>
+      <ol className={classes.list}>
+        {items.flatMap((item, index, items) => {
+          const isLastItem = items.length - 1 === index;
+          return [
+            <Breadcrumb {...item} active={isLastItem} key={item.url} />,
+            isLastItem ? null : <Separator />,
+          ];
+        })}
       </ol>
     </nav>
   );
 };
 
-type Breadcrumb = {
-  url: string;
-  label: string;
-  active?: boolean;
-};
-
 const Breadcrumb = ({ url, label, active }: Breadcrumb) => {
   const classes = {
-    container: classNames("breadcrumb", active ? "breadcrumb--active" : null),
-    link: classNames("breadcrumb__link"),
-    label: classNames("breadcrumb__label"),
+    container: clsx(
+      "breadcrumb",
+      active ? "breadcrumb--active" : "breadcrumb--inactive"
+    ),
+    link: "breadcrumb__link",
+    label: "breadcrumb__label",
   };
 
   return (
-    <li className={classes.container}>
-      <a href={url} className={classes.link}>
-        <span className={classes.label}>{label}</span>
-      </a>
-    </li>
+    <>
+      <li className={classes.container}>
+        <a href={url} className={classes.link} title={label}>
+          <span className={classes.label}>{label}</span>
+        </a>
+      </li>
+    </>
   );
 };
 
-const BreadcrumbSeparator = () => {
+const Separator = () => {
+  const classes = {
+    container: "breadcrumb-separator",
+    icon: "breadcrumb-separator__icon",
+  };
+
   return (
-    <li className="breadcrumb breadcrumb--separator" aria-hidden="true">
+    <li className={classes.container} aria-hidden="true">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="breadcrumb__icon"
+        className={classes.icon}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -72,27 +117,6 @@ const BreadcrumbSeparator = () => {
           strokeLinejoin="round"
           strokeWidth="2"
           d="M9 5l7 7-7 7"
-        />
-      </svg>
-    </li>
-  );
-};
-
-const CollapsedBreadcrumb = () => {
-  return (
-    <li className="breadcrumb breadcrumb--collapsed">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="breadcrumb__icon"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
         />
       </svg>
     </li>
